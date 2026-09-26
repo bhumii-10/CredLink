@@ -32,8 +32,8 @@ export function Drawer({ isOpen, onClose, title, description, children }: Drawer
       <div className="w-full max-w-md h-full bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col">
         <div className="px-5 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/50 dark:bg-slate-900/50">
           <div>
-            <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{title}</h3>
-            {description && <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{description}</p>}
+            <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">{title}</h3>
+            {description && <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">{description}</p>}
           </div>
           <Button variant="ghost" size="sm" onClick={onClose} className="h-7 w-7 p-0 rounded-full">
             <X className="w-4 h-4" />

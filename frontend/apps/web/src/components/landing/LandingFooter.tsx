@@ -17,12 +17,12 @@ export function LandingFooter() {
               </div>
               <span className="text-base font-bold text-white tracking-tight">CredLink Network</span>
             </Link>
-            <p className="text-xs text-slate-400 max-w-md leading-relaxed">
+            <p className="text-sm text-slate-400 max-w-md leading-relaxed">
               Cross-domain verifiable digital identity and record network connecting education, employment, financial services, and healthcare.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-6 text-xs text-slate-300 font-medium">
+          <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 font-medium">
             <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
             <a href="#for-citizens" className="hover:text-white transition-colors">For Citizens</a>
             <a href="#for-institutions" className="hover:text-white transition-colors">For Institutions</a>
@@ -32,9 +32,9 @@ export function LandingFooter() {
         </div>
 
         {/* Prototype Disclaimer */}
-        <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
           <p>© 2026 CredLink Network. Synthetic Hackathon Demonstration Platform.</p>
-          <Badge variant="neutral" className="bg-slate-800 text-slate-300 border-slate-700 text-[10px]">
+          <Badge variant="neutral" className="bg-slate-800 text-slate-300 border-slate-700 text-xs">
             Demo Environment — No Production Keys
           </Badge>
         </div>

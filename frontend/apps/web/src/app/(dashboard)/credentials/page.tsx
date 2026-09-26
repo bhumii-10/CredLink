@@ -85,17 +85,17 @@ export default function CredentialsPage() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
               Verifiable Credential Management
             </h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+            <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
               Issue, inspect claims, present simulated QR proofs, or manage credential revocation lifecycles.
             </p>
           </div>
           <Button
             variant={currentUser.role === 'HOSPITAL' ? 'health' : 'primary'}
             onClick={() => setShowIssueModal(true)}
-            className="gap-2 shrink-0"
+            className="gap-2 shrink-0 font-semibold"
           >
             <Plus className="w-4 h-4" />
             <span>Issue New Credential</span>
@@ -114,14 +114,14 @@ export default function CredentialsPage() {
               />
             </div>
             <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
-              <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mr-2">
+              <div className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 mr-2">
                 <Filter className="w-3.5 h-3.5" />
                 <span>Filters:</span>
               </div>
               <select
                 value={selectedDomain}
                 onChange={(e) => setSelectedDomain(e.target.value)}
-                className="h-9 px-3 text-xs bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-400"
+                className="h-9 px-3 text-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-400"
               >
                 <option value="ALL">All Domains</option>
                 <option value="HOSPITAL">Healthcare / Hospital</option>
@@ -132,7 +132,7 @@ export default function CredentialsPage() {
               <select
                 value={selectedStatus}
                 onChange={(e) => setSelectedStatus(e.target.value)}
-                className="h-9 px-3 text-xs bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-400"
+                className="h-9 px-3 text-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-400"
               >
                 <option value="ALL">All Statuses</option>
                 <option value="VALID">Valid</option>
@@ -176,25 +176,25 @@ export default function CredentialsPage() {
                       <TableCell>
                         <div>
                           <p className="font-semibold text-slate-900 dark:text-slate-100">{cred.subjectName}</p>
-                          <p className="text-[10px] font-mono text-slate-500">{cred.subjectId}</p>
+                          <p className="text-xs font-mono text-slate-500">{cred.subjectId}</p>
                         </div>
                       </TableCell>
                       <TableCell>
                         <div>
                           <p className="font-medium text-slate-800 dark:text-slate-200">{cred.credentialType}</p>
-                          <p className="text-[10px] text-slate-400">{cred.claims.length} verified claims</p>
+                          <p className="text-xs text-slate-400">{cred.claims.length} verified claims</p>
                         </div>
                       </TableCell>
                       <TableCell>
                         <div>
-                          <p className="text-xs font-medium text-slate-800 dark:text-slate-200">{cred.issuerName}</p>
-                          <Badge className={`text-[10px] mt-0.5 ${domainBadge.bg} ${domainBadge.text} ${domainBadge.border}`}>
+                          <p className="text-sm font-medium text-slate-800 dark:text-slate-200">{cred.issuerName}</p>
+                          <Badge className={`text-xs mt-0.5 ${domainBadge.bg} ${domainBadge.text} ${domainBadge.border}`}>
                             {cred.domain}
                           </Badge>
                         </div>
                       </TableCell>
                       <TableCell>
-                        <span className="text-xs text-slate-500">{cred.issuanceDate}</span>
+                        <span className="text-sm text-slate-500">{cred.issuanceDate}</span>
                       </TableCell>
                       <TableCell>
                         <Badge className={statusStyle.bg}>{statusStyle.label}</Badge>

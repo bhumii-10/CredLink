@@ -41,10 +41,10 @@ export function CitizenBenefits() {
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
               Empowering Citizens with True Record Control
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
               Traditional identity systems lock your information inside institutional silos. CredLink gives citizens portable, verifiable records with full control over disclosure.
             </p>
-            <div className="p-4 bg-forest-50 dark:bg-forest-900/40 border border-forest-100 dark:border-forest-800 rounded-xl text-xs text-forest-900 dark:text-forest-100 font-medium">
+            <div className="p-4 bg-forest-50 dark:bg-forest-900/40 border border-forest-100 dark:border-forest-800 rounded-xl text-xs sm:text-sm text-forest-900 dark:text-forest-100 font-medium">
               "You own your credentials. Verifiers only see what you explicitly approve for their requested purpose."
             </div>
           </div>
@@ -56,8 +56,8 @@ export function CitizenBenefits() {
                 <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800 w-fit">
                   {b.icon}
                 </div>
-                <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">{b.title}</h3>
-                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">{b.desc}</p>
+                <h3 className="text-base font-bold text-slate-900 dark:text-slate-100">{b.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{b.desc}</p>
               </Card>
             ))}
           </div>

@@ -30,10 +30,10 @@ export default function AuditPage() {
       <div className="space-y-6">
         {/* Header */}
         <div>
-          <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+          <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
             Immutable Network Audit Trail
           </h1>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
             Complete event ledger of issuance, verification requests, consent attestations, and trust registry updates.
           </p>
         </div>
@@ -72,23 +72,23 @@ export default function AuditPage() {
                 return (
                   <TableRow key={log.id}>
                     <TableCell>
-                      <span className="font-mono text-xs text-slate-500">{log.timestamp}</span>
+                      <span className="font-mono text-xs sm:text-sm text-slate-500">{log.timestamp}</span>
                     </TableCell>
                     <TableCell>
-                      <span className="font-mono text-[11px] font-semibold text-slate-800 dark:text-slate-200">
+                      <span className="font-mono text-xs font-semibold text-slate-800 dark:text-slate-200">
                         {log.eventType}
                       </span>
                     </TableCell>
                     <TableCell>
                       <div>
-                        <p className="font-medium text-xs text-slate-900 dark:text-slate-100">{log.organization}</p>
-                        <Badge className={`text-[10px] ${domainStyle.bg} ${domainStyle.text} ${domainStyle.border}`}>
+                        <p className="font-medium text-sm text-slate-900 dark:text-slate-100">{log.organization}</p>
+                        <Badge className={`text-xs ${domainStyle.bg} ${domainStyle.text} ${domainStyle.border}`}>
                           {log.domain}
                         </Badge>
                       </div>
                     </TableCell>
                     <TableCell>
-                      <span className="text-xs text-slate-700 dark:text-slate-300">{log.action}</span>
+                      <span className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">{log.action}</span>
                     </TableCell>
                     <TableCell>
                       <Badge variant={log.outcome === 'SUCCESS' ? 'success' : 'warning'}>

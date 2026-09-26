@@ -1,1 +1,24 @@
-node_modules
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+frontend/.next/
+
+# Backend — keep local, never push
+/backend/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+dist/
+.next/

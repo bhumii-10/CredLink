@@ -51,7 +51,7 @@ export function InstitutionDomains() {
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
             Built for Authorized Institutions
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
             Institutions operate within their permitted credential domains while sharing verifiable trust across the network.
           </p>
         </div>
@@ -64,18 +64,18 @@ export function InstitutionDomains() {
                   <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-800">
                     {c.icon}
                   </div>
-                  <Badge variant="neutral" className="text-[10px]">
+                  <Badge variant="neutral" className="text-xs">
                     {c.role}
                   </Badge>
                 </div>
-                <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">{c.domain}</h3>
-                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">{c.desc}</p>
+                <h3 className="text-base font-bold text-slate-900 dark:text-slate-100">{c.domain}</h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{c.desc}</p>
               </div>
 
               <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
                 <Link href="/login">
-                  <span className="text-xs font-semibold text-forest-800 dark:text-sage-400 hover:underline inline-flex items-center gap-1">
-                    Access Portal <ArrowRight className="w-3 h-3" />
+                  <span className="text-sm font-semibold text-forest-800 dark:text-sage-400 hover:underline inline-flex items-center gap-1">
+                    Access Portal <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </Link>
               </div>

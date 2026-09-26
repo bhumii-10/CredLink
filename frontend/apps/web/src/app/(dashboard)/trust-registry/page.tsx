@@ -48,14 +48,14 @@ export default function TrustRegistryPage() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
               Network Trust Registry & Issuer Authorization
             </h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+            <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
               Verifiable Decentralized Identifiers (DIDs) and authorized credential schemas for verified institutions.
             </p>
           </div>
-          <Badge variant="neutral" className="self-start sm:self-auto py-1 px-3">
+          <Badge variant="neutral" className="self-start sm:self-auto py-1 px-3 text-xs">
             Root Governance: CredLink Authority
           </Badge>
         </div>
@@ -72,11 +72,11 @@ export default function TrustRegistryPage() {
               />
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-xs text-slate-500">Filter Realm:</span>
+              <span className="text-sm text-slate-500">Filter Realm:</span>
               <select
                 value={selectedDomain}
                 onChange={(e) => setSelectedDomain(e.target.value)}
-                className="h-9 px-3 text-xs bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-400"
+                className="h-9 px-3 text-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-400"
               >
                 <option value="ALL">All Realms</option>
                 <option value="HOSPITAL">Healthcare</option>
@@ -115,23 +115,23 @@ export default function TrustRegistryPage() {
                     <TableCell>
                       <div>
                         <p className="font-semibold text-slate-900 dark:text-slate-100">{org.name}</p>
-                        <p className="text-[10px] font-mono text-slate-500">{org.code}</p>
+                        <p className="text-xs font-mono text-slate-500">{org.code}</p>
                       </div>
                     </TableCell>
                     <TableCell>
-                      <span className="font-mono text-xs text-slate-700 dark:text-slate-300">
+                      <span className="font-mono text-xs sm:text-sm text-slate-700 dark:text-slate-300">
                         {truncateDid(org.did)}
                       </span>
                     </TableCell>
                     <TableCell>
-                      <Badge className={`text-[10px] ${domainStyle.bg} ${domainStyle.text} ${domainStyle.border}`}>
+                      <Badge className={`text-xs ${domainStyle.bg} ${domainStyle.text} ${domainStyle.border}`}>
                         {org.domain}
                       </Badge>
                     </TableCell>
                     <TableCell>
                       <div className="flex flex-wrap gap-1 max-w-xs">
                         {org.authorizedCredentialTypes.map((type) => (
-                          <span key={type} className="px-1.5 py-0.5 text-[10px] bg-slate-100 dark:bg-slate-800 rounded font-medium text-slate-600 dark:text-slate-300">
+                          <span key={type} className="px-1.5 py-0.5 text-xs bg-slate-100 dark:bg-slate-800 rounded font-medium text-slate-600 dark:text-slate-300">
                             {type}
                           </span>
                         ))}

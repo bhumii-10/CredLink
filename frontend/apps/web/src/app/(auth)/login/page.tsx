@@ -77,10 +77,10 @@ export default function LoginPage() {
         <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 font-bold text-lg mb-4 shadow-sm">
           CL
         </div>
-        <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+        <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
           CredLink Admin Portal
         </h1>
-        <p className="mt-1.5 text-xs text-slate-500 dark:text-slate-400 max-w-xs mx-auto">
+        <p className="mt-1.5 text-sm text-slate-500 dark:text-slate-400 max-w-xs sm:max-w-sm mx-auto">
           Unified Citizen-Centric Digital Identity & Verifiable Credential Platform
         </p>
       </div>
@@ -90,7 +90,7 @@ export default function LoginPage() {
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Domain Selection Pills */}
             <div>
-              <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-2">
+              <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                 Select Organization Realm
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -112,8 +112,8 @@ export default function LoginPage() {
                         {isSelected && <CheckCircle2 className="w-3.5 h-3.5 text-slate-900 dark:text-slate-100" />}
                       </div>
                       <div className="mt-2">
-                        <p className="text-xs font-semibold text-slate-900 dark:text-slate-100">{item.title}</p>
-                        <p className="text-[10px] text-slate-500 dark:text-slate-400 leading-tight mt-0.5">{item.desc}</p>
+                        <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">{item.title}</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-tight mt-0.5">{item.desc}</p>
                       </div>
                     </button>
                   );
@@ -144,14 +144,14 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-8 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                className="absolute right-3 top-8.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
               >
                 {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
 
             {/* Remember me & Forgot Password */}
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <label className="flex items-center gap-2 cursor-pointer text-slate-600 dark:text-slate-400">
                 <input
                   type="checkbox"
@@ -165,13 +165,13 @@ export default function LoginPage() {
             </div>
 
             {error && (
-              <div className="p-2.5 bg-rose-50 border border-rose-200 text-rose-700 dark:bg-rose-950/40 dark:border-rose-900 dark:text-rose-400 rounded-md text-xs">
+              <div className="p-2.5 bg-rose-50 border border-rose-200 text-rose-700 dark:bg-rose-950/40 dark:border-rose-900 dark:text-rose-400 rounded-md text-sm">
                 {error}
               </div>
             )}
 
             {/* Submit Button */}
-            <Button type="submit" isLoading={isLoading} className="w-full h-10 mt-2 gap-2">
+            <Button type="submit" isLoading={isLoading} className="w-full h-10 mt-2 gap-2 text-sm font-semibold">
               <span>Sign In to {selectedRole} Portal</span>
               <ArrowRight className="w-4 h-4" />
             </Button>
@@ -179,7 +179,7 @@ export default function LoginPage() {
 
           {/* Demo notice footer */}
           <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 text-center">
-            <Badge variant="neutral" size="sm" className="text-[10px] uppercase font-mono tracking-wider">
+            <Badge variant="neutral" size="sm" className="text-xs uppercase font-mono tracking-wider">
               DEMO MODE — NO REAL CREDENTIAL KEYS EXPOSED
             </Badge>
           </div>

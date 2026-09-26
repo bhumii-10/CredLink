@@ -64,23 +64,23 @@ export default function DashboardPage() {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-sm font-semibold tracking-tight">
+              <h3 className="text-base font-semibold tracking-tight">
                 {currentUser.organizationName}
               </h3>
-              <p className="text-xs opacity-80 font-mono mt-0.5">
+              <p className="text-xs sm:text-sm opacity-80 font-mono mt-0.5">
                 DID: {currentUser.organizationDid}
               </p>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <Badge variant="neutral" className="bg-slate-800 text-slate-200 dark:bg-slate-200 dark:text-slate-800 border-none">
+            <Badge variant="neutral" className="bg-slate-800 text-slate-200 dark:bg-slate-200 dark:text-slate-800 border-none text-xs">
               {currentUser.role} ENVIRONMENT
             </Badge>
             <Button
               variant={currentUser.role === 'HOSPITAL' ? 'health' : 'secondary'}
               size="sm"
               onClick={() => setIsIssueModalOpen(true)}
-              className="gap-1.5"
+              className="gap-1.5 text-xs font-medium"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Issue Credential</span>
@@ -99,20 +99,20 @@ export default function DashboardPage() {
                     Healthcare Realm & Privacy Controls
                   </span>
                 </div>
-                <h4 className="text-base font-bold text-slate-900 dark:text-slate-100">
+                <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
                   Patient Consent & Health Credentials Overview
                 </h4>
-                <p className="text-xs text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                <p className="text-sm text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
                   St. Jude Hospital operates under strict minimum disclosure principles. Health claims (immunization, insurance eligibility) are issued with Zero-Knowledge verification proofs.
                 </p>
               </div>
               <div className="flex items-center gap-4 border-t md:border-t-0 md:border-l border-teal-200/60 dark:border-teal-900/60 pt-3 md:pt-0 md:pl-6 shrink-0">
                 <div>
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400">Active Health Credentials</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Active Health Credentials</p>
                   <p className="text-xl font-bold text-teal-700 dark:text-teal-300">2,310</p>
                 </div>
                 <div>
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400">Consent Verifications</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Consent Verifications</p>
                   <p className="text-xl font-bold text-slate-900 dark:text-slate-100">1,940</p>
                 </div>
               </div>
@@ -122,9 +122,9 @@ export default function DashboardPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Card className="p-4 flex items-center justify-between">
               <div>
-                <p className="text-xs font-medium text-slate-500 dark:text-slate-400">Total Issued Credentials</p>
+                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Total Issued Credentials</p>
                 <p className="text-2xl font-bold text-slate-900 dark:text-slate-100 mt-1">{roleCredentials.length * 450 + 120}</p>
-                <p className="text-[10px] text-emerald-600 dark:text-emerald-400 mt-1 font-medium">↑ 12% this month</p>
+                <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-1 font-medium">↑ 12% this month</p>
               </div>
               <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400">
                 <FileCheck2 className="w-5 h-5" />
@@ -133,9 +133,9 @@ export default function DashboardPage() {
 
             <Card className="p-4 flex items-center justify-between">
               <div>
-                <p className="text-xs font-medium text-slate-500 dark:text-slate-400">Active Verification Requests</p>
+                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Active Verification Requests</p>
                 <p className="text-2xl font-bold text-slate-900 dark:text-slate-100 mt-1">{roleVerifications.length}</p>
-                <p className="text-[10px] text-slate-500 mt-1 font-medium">100% Consent Controlled</p>
+                <p className="text-xs text-slate-500 mt-1 font-medium">100% Consent Controlled</p>
               </div>
               <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400">
                 <ShieldCheck className="w-5 h-5" />
@@ -144,12 +144,12 @@ export default function DashboardPage() {
 
             <Card className="p-4 flex items-center justify-between">
               <div>
-                <p className="text-xs font-medium text-slate-500 dark:text-slate-400">Trust Registry Status</p>
+                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Trust Registry Status</p>
                 <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-1 flex items-center gap-1">
                   <CheckCircle2 className="w-4 h-4" />
                   Authorized Issuer
                 </p>
-                <p className="text-[10px] text-slate-500 mt-1 font-mono">{truncateDid(currentUser.organizationDid)}</p>
+                <p className="text-xs text-slate-500 mt-1 font-mono">{truncateDid(currentUser.organizationDid)}</p>
               </div>
               <div className="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
                 <Building2 className="w-5 h-5" />
@@ -164,12 +164,12 @@ export default function DashboardPage() {
             <div className="flex items-center justify-between w-full">
               <div>
                 <CardTitle>Recent Issued Credentials ({currentUser.role})</CardTitle>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
                   Verifiable credentials issued under governance schema.
                 </p>
               </div>
               <Link href="/credentials">
-                <Button variant="ghost" size="sm" className="gap-1 text-xs">
+                <Button variant="ghost" size="sm" className="gap-1 text-xs sm:text-sm font-medium">
                   <span>View Catalog</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Button>
@@ -194,7 +194,7 @@ export default function DashboardPage() {
                     <TableCell>
                       <div>
                         <p className="font-semibold text-slate-900 dark:text-slate-100">{cred.subjectName}</p>
-                        <p className="text-[10px] font-mono text-slate-500">{cred.subjectId}</p>
+                        <p className="text-xs font-mono text-slate-500">{cred.subjectId}</p>
                       </div>
                     </TableCell>
                     <TableCell>
@@ -206,7 +206,7 @@ export default function DashboardPage() {
                       </Badge>
                     </TableCell>
                     <TableCell>
-                      <span className="text-xs text-slate-500">{cred.issuanceDate}</span>
+                      <span className="text-xs sm:text-sm text-slate-500">{cred.issuanceDate}</span>
                     </TableCell>
                     <TableCell>
                       <Badge className={statusBadge.bg}>{statusBadge.label}</Badge>
@@ -224,12 +224,12 @@ export default function DashboardPage() {
             <div className="flex items-center justify-between w-full">
               <div>
                 <CardTitle>Verification Request Log</CardTitle>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
                   Selective disclosure verification checks submitted by institutions.
                 </p>
               </div>
               <Link href="/verification">
-                <Button variant="ghost" size="sm" className="gap-1 text-xs">
+                <Button variant="ghost" size="sm" className="gap-1 text-xs sm:text-sm font-medium">
                   <span>Verification Center</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Button>
@@ -257,16 +257,16 @@ export default function DashboardPage() {
                     <TableCell>
                       <div>
                         <p className="font-medium text-slate-800 dark:text-slate-200">{req.targetSubjectName}</p>
-                        <p className="text-[10px] font-mono text-slate-500">{req.targetSubjectId}</p>
+                        <p className="text-xs font-mono text-slate-500">{req.targetSubjectId}</p>
                       </div>
                     </TableCell>
                     <TableCell>
-                      <span className="text-xs text-slate-600 dark:text-slate-400">{req.purpose}</span>
+                      <span className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">{req.purpose}</span>
                     </TableCell>
                     <TableCell>
                       <div className="flex flex-wrap gap-1">
                         {req.requestedClaims.map((claim) => (
-                          <span key={claim} className="px-1.5 py-0.5 text-[10px] bg-slate-100 dark:bg-slate-800 rounded font-medium text-slate-600 dark:text-slate-300">
+                          <span key={claim} className="px-1.5 py-0.5 text-xs bg-slate-100 dark:bg-slate-800 rounded font-medium text-slate-600 dark:text-slate-300">
                             {claim}
                           </span>
                         ))}

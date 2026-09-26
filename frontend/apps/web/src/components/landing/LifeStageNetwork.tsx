@@ -59,7 +59,7 @@ export function LifeStageNetwork() {
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
             Connecting Records Across Life Stages
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
             As citizens transition from education to employment, finance, and healthcare, CredLink enables authorized institutions to issue and verify domain-specific records without exposing raw private data.
           </p>
         </div>
@@ -72,26 +72,26 @@ export function LifeStageNetwork() {
                   <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-100 dark:border-slate-800">
                     {domain.icon}
                   </div>
-                  <span className={`text-[10px] font-semibold px-2 py-0.5 rounded border ${domain.badgeColor}`}>
+                  <span className={`text-xs font-semibold px-2 py-0.5 rounded border ${domain.badgeColor}`}>
                     {domain.badge}
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">{domain.title}</h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{domain.subtitle}</p>
+                  <h3 className="text-base font-bold text-slate-900 dark:text-slate-100">{domain.title}</h3>
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">{domain.subtitle}</p>
                 </div>
 
-                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   {domain.description}
                 </p>
 
                 <div className="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-1.5">
-                  <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
+                  <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
                     Verifiable Credentials:
                   </p>
                   {domain.examples.map((ex) => (
-                    <div key={ex} className="flex items-center gap-1.5 text-[11px] text-slate-700 dark:text-slate-300">
+                    <div key={ex} className="flex items-center gap-1.5 text-xs text-slate-700 dark:text-slate-300">
                       <CheckCircle2 className="w-3.5 h-3.5 text-forest-800 dark:text-sage-500 shrink-0" />
                       <span>{ex}</span>
                     </div>

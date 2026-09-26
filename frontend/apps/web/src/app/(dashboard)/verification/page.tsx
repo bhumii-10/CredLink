@@ -76,17 +76,17 @@ export default function VerificationPage() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
               Selective Disclosure Verification Center
             </h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+            <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
               Request zero-knowledge claims from citizens across education, employment, banking, and healthcare domains.
             </p>
           </div>
           <Button
             variant={currentUser.role === 'HOSPITAL' ? 'health' : 'primary'}
             onClick={() => setShowCreateModal(true)}
-            className="gap-2 shrink-0"
+            className="gap-2 shrink-0 font-semibold"
           >
             <Plus className="w-4 h-4" />
             <span>Create Verification Request</span>
@@ -117,24 +117,24 @@ export default function VerificationPage() {
                     <TableCell>
                       <div>
                         <p className="font-semibold text-slate-900 dark:text-slate-100">{req.requesterName}</p>
-                        <Badge variant="neutral" className="text-[10px] mt-0.5">{req.requesterDomain}</Badge>
+                        <Badge variant="neutral" className="text-xs mt-0.5">{req.requesterDomain}</Badge>
                       </div>
                     </TableCell>
                     <TableCell>
                       <div>
                         <p className="font-medium text-slate-800 dark:text-slate-200">{req.targetSubjectName}</p>
-                        <p className="text-[10px] font-mono text-slate-500">{req.targetSubjectId}</p>
+                        <p className="text-xs font-mono text-slate-500">{req.targetSubjectId}</p>
                       </div>
                     </TableCell>
                     <TableCell>
-                      <span className="text-xs text-slate-600 dark:text-slate-400">{req.purpose}</span>
+                      <span className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">{req.purpose}</span>
                     </TableCell>
                     <TableCell>
                       <div className="flex flex-wrap gap-1 max-w-xs">
                         {req.requestedClaims.map((claim) => (
                           <span
                             key={claim}
-                            className="px-1.5 py-0.5 text-[10px] bg-slate-100 dark:bg-slate-800 rounded font-medium text-slate-600 dark:text-slate-300"
+                            className="px-1.5 py-0.5 text-xs bg-slate-100 dark:bg-slate-800 rounded font-medium text-slate-600 dark:text-slate-300"
                           >
                             {claim}
                           </span>

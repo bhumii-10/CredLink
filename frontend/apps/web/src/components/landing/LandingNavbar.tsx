@@ -17,18 +17,18 @@ export function LandingNavbar() {
             CL
           </div>
           <div className="flex flex-col">
-            <span className="text-sm font-bold text-slate-900 dark:text-slate-100 tracking-tight flex items-center gap-1.5">
+            <span className="text-base font-bold text-slate-900 dark:text-slate-100 tracking-tight flex items-center gap-1.5">
               CredLink
-              <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-forest-100 text-forest-800 dark:bg-forest-900 dark:text-forest-200">
+              <span className="text-xs font-medium px-1.5 py-0.5 rounded bg-forest-100 text-forest-800 dark:bg-forest-900 dark:text-forest-200">
                 Network
               </span>
             </span>
-            <span className="text-[10px] text-slate-500 dark:text-slate-400 -mt-0.5">Life-Stage Digital Identity</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400 -mt-0.5">Life-Stage Digital Identity</span>
           </div>
         </Link>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-8 text-xs font-medium text-slate-600 dark:text-slate-300">
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
           <a href="#how-it-works" className="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
             How It Works
           </a>
@@ -69,7 +69,7 @@ export function LandingNavbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-4 space-y-3 text-xs font-medium">
+        <div className="md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-4 space-y-3 text-sm font-medium">
           <a
             href="#how-it-works"
             onClick={() => setMobileMenuOpen(false)}

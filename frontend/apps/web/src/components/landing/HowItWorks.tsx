@@ -43,7 +43,7 @@ export function HowItWorks() {
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
             How CredLink Operates
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
             A three-step architecture separating record issuance, citizen consent, and verifier validation.
           </p>
         </div>
@@ -62,17 +62,17 @@ export function HowItWorks() {
               </div>
 
               <div>
-                <h3 className="text-base font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
                   {item.title}
                 </h3>
-                <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">{item.subtitle}</p>
+                <p className="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-0.5">{item.subtitle}</p>
               </div>
 
-              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 {item.description}
               </p>
 
-              <div className="pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
                 <Lock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                 <span>{item.detail}</span>
               </div>

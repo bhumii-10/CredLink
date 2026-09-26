@@ -47,10 +47,10 @@ export function Topbar({ onToggleMobileSidebar }: TopbarProps) {
           <Menu className="w-5 h-5" />
         </button>
         <div>
-          <span className="text-xs text-slate-400 dark:text-slate-500 font-medium hidden sm:inline-block">
+          <span className="text-sm text-slate-400 dark:text-slate-500 font-medium hidden sm:inline-block">
             CredLink Portal /
           </span>{' '}
-          <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100 inline-block tracking-tight">
+          <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100 inline-block tracking-tight">
             {getPageTitle(pathname)}
           </h2>
         </div>
@@ -62,7 +62,7 @@ export function Topbar({ onToggleMobileSidebar }: TopbarProps) {
         <div className="relative">
           <button
             onClick={() => setShowRoleMenu(!showRoleMenu)}
-            className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 hover:bg-slate-200/80 dark:bg-slate-800 dark:hover:bg-slate-700/80 rounded-md border border-slate-200/80 dark:border-slate-700 text-xs font-medium text-slate-800 dark:text-slate-200 transition-colors"
+            className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 hover:bg-slate-200/80 dark:bg-slate-800 dark:hover:bg-slate-700/80 rounded-md border border-slate-200/80 dark:border-slate-700 text-sm font-medium text-slate-800 dark:text-slate-200 transition-colors"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-500" />
             <span className="hidden sm:inline">Switch Role:</span>
@@ -72,7 +72,7 @@ export function Topbar({ onToggleMobileSidebar }: TopbarProps) {
 
           {showRoleMenu && (
             <div className="absolute right-0 mt-2 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-xl py-1.5 z-50 animate-fade-in">
-              <div className="px-3 py-1.5 text-[10px] font-semibold uppercase text-slate-400 dark:text-slate-500 border-b border-slate-100 dark:border-slate-800">
+              <div className="px-3 py-1.5 text-xs font-semibold uppercase text-slate-400 dark:text-slate-500 border-b border-slate-100 dark:border-slate-800">
                 Simulate Organization Domain
               </div>
               {roles.map((r) => (
@@ -82,7 +82,7 @@ export function Topbar({ onToggleMobileSidebar }: TopbarProps) {
                     switchRole(r.role);
                     setShowRoleMenu(false);
                   }}
-                  className={`w-full flex items-center gap-2.5 px-3 py-2 text-xs text-left hover:bg-slate-50 dark:hover:bg-slate-800/80 ${
+                  className={`w-full flex items-center gap-2.5 px-3 py-2 text-sm text-left hover:bg-slate-50 dark:hover:bg-slate-800/80 ${
                     currentUser.role === r.role ? 'font-semibold bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100' : 'text-slate-700 dark:text-slate-300'
                   }`}
                 >
@@ -107,21 +107,21 @@ export function Topbar({ onToggleMobileSidebar }: TopbarProps) {
           {showNotifications && (
             <div className="absolute right-0 mt-2 w-72 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-xl p-3 z-50 animate-fade-in">
               <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
-                <span className="text-xs font-semibold text-slate-900 dark:text-slate-100">Notifications</span>
-                <span className="text-[10px] bg-indigo-50 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-400 px-1.5 py-0.5 rounded font-medium">
+                <span className="text-sm font-semibold text-slate-900 dark:text-slate-100">Notifications</span>
+                <span className="text-xs bg-indigo-50 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-400 px-1.5 py-0.5 rounded font-medium">
                   2 New
                 </span>
               </div>
               <div className="mt-2 space-y-2 text-xs">
                 <div className="p-2 bg-slate-50 dark:bg-slate-800/60 rounded border border-slate-100 dark:border-slate-800">
                   <p className="font-medium text-slate-800 dark:text-slate-200">Verification Request Received</p>
-                  <p className="text-[11px] text-slate-500 mt-0.5">Apex Imperial Bank requested KYC claims.</p>
-                  <span className="text-[10px] text-slate-400 mt-1 block">5m ago</span>
+                  <p className="text-xs text-slate-500 mt-0.5">Apex Imperial Bank requested KYC claims.</p>
+                  <span className="text-xs text-slate-400 mt-1 block">5m ago</span>
                 </div>
                 <div className="p-2 bg-slate-50 dark:bg-slate-800/60 rounded border border-slate-100 dark:border-slate-800">
                   <p className="font-medium text-slate-800 dark:text-slate-200">Issuer Status Active</p>
-                  <p className="text-[11px] text-slate-500 mt-0.5">St. Jude Hospital registered in Trust Registry.</p>
-                  <span className="text-[10px] text-slate-400 mt-1 block">1h ago</span>
+                  <p className="text-xs text-slate-500 mt-0.5">St. Jude Hospital registered in Trust Registry.</p>
+                  <span className="text-xs text-slate-400 mt-1 block">1h ago</span>
                 </div>
               </div>
             </div>
